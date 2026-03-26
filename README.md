@@ -24,8 +24,6 @@ ORM: Entity Framework Core (Code-First approach).
 
 Database: MySQL 8.4 LTS.
 
-DevOps: Docker & Docker Compose.
-
 Frontend: Razor Views, HTML5, CSS3, JavaScript, Bootstrap 5.
 
 

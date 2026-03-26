@@ -29,18 +29,11 @@ DevOps: Docker & Docker Compose.
 Frontend: Razor Views, HTML5, CSS3, JavaScript, Bootstrap 5.
 
 
-# IMPORTANT
-
-Security & Testing Disclaimer:
-This project is intended for portfolio and demonstration purposes only. The credentials found in appsettings.json and docker-compose.yml (such as password123) are hardcoded strictly to facilitate local testing and should never be used in a production environment.
-
 # 🚀 How to Run Locally
 
 ## Prerequisites:
 
   .NET 9 SDK
-	
-  Docker Desktop
 	
 ## 1.Clone the repository
 
@@ -50,11 +43,7 @@ This project is intended for portfolio and demonstration purposes only. The cred
 
 ## 2.Start the Database
 
-Ensure Docker is running and execute:
-
-docker-compose up -d
-
-This will spin up a MySQL 8.4 container pre-configured for the application.
+Start your own MySQL Database and configure appsettings.json
 
 
 ## 3. Apply Migrations

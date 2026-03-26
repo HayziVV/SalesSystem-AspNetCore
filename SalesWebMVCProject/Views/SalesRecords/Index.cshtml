@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Sales Records";
+}
+
+<h2 class="mb-4">@ViewData["Title"]</h2>
+
+<div class="row g-4">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <form asp-action="SimpleSearch">
+                    <fieldset>
+                        <legend class="h4 border-bottom pb-2">Simple search</legend>
+                        <div class="mb-3">
+                            <label for="minDate" class="form-label">Min Date</label>
+                            <input type="date" name="minDate" class="form-control" value="@DateTime.Now.ToString("yyyy-01-01")" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="maxDate" class="form-label">Max Date</label>
+                            <input type="date" name="maxDate" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <form asp-action="GroupingSearch">
+                    <fieldset>
+                        <legend class="h4 border-bottom pb-2">Grouping search</legend>
+                        <div class="mb-3">
+                            <label for="minDate" class="form-label">Min Date</label>
+                            <input type="date" name="minDate" class="form-control" value="@DateTime.Now.ToString("yyyy-01-01")" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="maxDate" class="form-label">Max Date</label>
+                            <input type="date" name="maxDate" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

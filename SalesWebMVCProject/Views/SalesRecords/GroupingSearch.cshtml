@@ -1,0 +1,60 @@
+﻿@model IEnumerable<IGrouping<Department, SalesRecord>>
+
+@{
+    ViewData["Title"] = "Grouping Search";
+}
+
+<h2 class="mb-4">@ViewData["Title"]</h2>
+
+<nav class="navbar navbar-dark bg-primary p-3 mb-4 rounded">
+    <div class="container-fluid">
+        <form class="row g-3 align-items-end" role="search">
+            <div class="col-auto">
+                <label for="minDate" class="form-label text-white">Min Date</label>
+                <input type="date" class="form-control" name="minDate" value="@ViewData["minDate"]" />
+            </div>
+            <div class="col-auto">
+                <label for="maxDate" class="form-label text-white">Max Date</label>
+                <input type="date" class="form-control" name="maxDate" value="@ViewData["maxDate"]" />
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-light">Filter</button>
+            </div>
+        </form>
+    </div>
+</nav>
+
+@foreach (var departmentGroup in Model)
+{
+    <div class="card shadow-sm mb-5">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h4 class="card-title mb-0">Department: @departmentGroup.Key.Name</h4>
+            <span class="badge bg-light text-primary fs-6">
+                Total sales: @departmentGroup.Sum(item => item.Amount).ToString("F2")
+            </span>
+        </div>
+        <div class="card-body p-0">
+            <table class="table table-striped table-hover mb-0">
+                <thead>
+                    <tr class="table-primary">
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Seller</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in departmentGroup)
+                    {
+                        <tr>
+                            <td>@item.Date.ToString("MM/dd/yyyy")</td>
+                            <td>@item.Amount.ToString("F2")</td>
+                            <td>@item.Seller.Name</td>
+                            <td>@item.Status</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

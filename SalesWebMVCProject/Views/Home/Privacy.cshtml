@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Data Handling & Privacy";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <div class="card shadow border-0">
+                <div class="card-header bg-primary text-white p-4 text-center">
+                    <h1 class="h2 mb-0">@ViewData["Title"]</h1>
+                </div>
+                <div class="card-body p-5">
+                    
+                    <section class="mb-5">
+                        <h3 class="text-primary border-bottom pb-2">1. Project Purpose</h3>
+                        <p class="text-muted">
+                            This application, <strong>Sales Web MVC</strong>, was developed strictly for educational and portfolio purposes.
+                            The main goal is to demonstrate technical proficiency in C#, ASP.NET Core, and Entity Framework.
+                        </p>
+                    </section>
+
+                    <section class="mb-5">
+                        <h3 class="text-primary border-bottom pb-2">2. Data Storage & Security</h3>
+                        <p class="text-muted">
+                            Currently, all data entered into this system (Sellers, Sales, and Departments) is stored in a <strong>local database</strong>
+                            (MySQL/MariaDB via Docker or LocalDB).
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-light"><strong>No Real Data:</strong> No sensitive personal information should be entered into this demonstration.</li>
+                            <li class="list-group-item bg-light"><strong>Local Environment:</strong> Since it's a local development project, the data remains on the host machine and is not shared with third parties.</li>
+                            <li class="list-group-item bg-light"><strong>Password Policy:</strong> Any passwords provided in configuration files (like <code>appsettings.json</code>) are for development environments only.</li>
+                        </ul>
+                    </section>
+
+                    <section class="mb-5">
+                        <h3 class="text-primary border-bottom pb-2">3. Developer Information</h3>
+                        <p class="text-muted">This project was developed and is maintained by:</p>
+                        <div class="bg-light p-4 rounded border">
+                            <p class="mb-1"><strong>Name:</strong> Vitor Henrique Vercezi</p>
+                            <p class="mb-1"><strong>Stack:</strong> Fullstack Developer (.NET / C# / SQL)</p>
+                            <p class="mb-1"><strong>GitHub:</strong> <a href="https://github.com/HayziVV" target="_blank">github.com/HayziVV</a></p>
+                            <p class="mb-0">
+                                <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/v%C3%ADtor-vercezi-b7917335b/" target="_blank">linkedin.com/in/vítor-vercezi-b7917335b</a>
+                            </p>
+                        </div>
+                    </section>
+
+                    <div class="text-center mt-4">
+                        <p class="small text-muted italic">Last updated: March 22, 2026</p>
+                        <hr>
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-outline-dark">Return to Home</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

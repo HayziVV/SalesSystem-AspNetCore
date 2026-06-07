@@ -2,7 +2,7 @@
 
 A comprehensive web-based management system for sales teams, departments, and performance reporting. Built with ASP.NET Core MVC and upgraded to .NET 9, following modern full-stack development practices.
 
-This project was initially developed as part of the [C# Complete course by Nelio Alves](link), 
+This project was initially developed as part of the [C# Complete course by Nelio Alves](https://www.udemy.com/course/programacao-orientada-a-objetos-csharp/), 
 originally built on .NET Core 2.1 and **migrated and upgraded to .NET 9** by me, alongside 
 significant frontend customizations — including color palette, button styling, UI components, 
 and the Privacy page, which was rebuilt from scratch.
@@ -77,11 +77,6 @@ The SeedingService will automatically populate the database with test data on fi
 
 ---
 
-## ⚠️ Security Notice
-
-This project is intended for portfolio and demonstration purposes only. Credentials found in `appsettings.json` and `docker-compose.yml` are hardcoded strictly to facilitate local testing and should **never** be used in a production environment.
-
----
 
 ## 👤 Author
 

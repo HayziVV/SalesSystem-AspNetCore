@@ -6,6 +6,7 @@ This project was initially developed as part of the [C# Complete course by Nelio
 originally built on .NET Core 2.1 and **migrated and upgraded to .NET 9** by me, alongside 
 significant frontend customizations — including color palette, button styling, UI components, 
 and the Privacy page, which was rebuilt from scratch.
+
 ---
 
 ## 📸 Screenshots
@@ -58,11 +59,23 @@ cd SalesWebMVCProject
 ```
 
 ### 2. Start the database
-Ensure Docker is running and execute:
-```bash
-docker-compose up -d
+Ensure your database is running and create a appsettings.json file
+*Here's an example of an appsettings.json*
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "SalesWebMVCProjectContext": "Server=localhost;Port=yourport;Database=yourdatabase;Uid=root;Pwd=yourpassword;"
+  }
+}
 ```
-This will spin up a MySQL 8.4 container pre-configured for the application.
+Make sure your MySQL instance is running before proceeding.
 
 ### 3. Apply migrations
 Create the database schema using the Package Manager Console:

@@ -1,63 +1,91 @@
 # Sales Web MVC Project
 
-### A comprehensive web-based management system for sales teams, departments, and performance reporting. This project was developed as part of a C# specialization and upgraded to the latest .NET 9 standards to showcase modern full-stack development skills.
+A comprehensive web-based management system for sales teams, departments, and performance reporting. Built with ASP.NET Core MVC and upgraded to .NET 9, following modern full-stack development practices.
 
-### Key Features
-Full CRUD Management: Complete control over Sellers and Departments.
+This project was initially developed as part of the [C# Complete course by Nelio Alves](link), 
+originally built on .NET Core 2.1 and **migrated and upgraded to .NET 9** by me, alongside 
+significant frontend customizations — including color palette, button styling, UI components, 
+and the Privacy page, which was rebuilt from scratch.
+---
 
-Business Intelligence Reports: Filterable sales records with "Simple Search" and "Grouping Search" (by department) using optimized LINQ queries.
+## 📸 Screenshots
 
-Robust Architecture: Implementation of the Service Layer pattern to decouple business logic from Controllers.
+### Sales Records
+![Sales Records](images/Sales.png)
 
-Custom Exception Handling: Graceful management of database integrity and concurrency errors (e.g., preventing the deletion of departments with active sellers).
+### Simple Search with Results
+![Simple Search](images/CSales.png)
 
-Auto-Seeding: Integrated SeedingService to automatically populate the database with test data upon first run.
+### Departments Management
+![Departments](images/Departments.png)
 
-Responsive UI: Styled with Bootstrap 5 and the Flatly theme for a clean, modern user experience.
+---
 
+## ✨ Key Features
 
-# 🛠️ Tech Stack
+- **Full CRUD Management** — Complete control over Sellers and Departments
+- **Business Intelligence Reports** — Filterable sales records with Simple Search and Grouping Search (by department) using optimized LINQ queries
+- **Robust Architecture** — Service Layer pattern to decouple business logic from Controllers
+- **Custom Exception Handling** — Graceful management of database integrity and concurrency errors (e.g., preventing deletion of departments with active sellers)
+- **Auto-Seeding** — Integrated SeedingService to automatically populate the database with test data on first run
+- **Responsive UI** — Styled with Bootstrap 5 and the Flatly theme
 
-Backend: C# 13, .NET 9.0, ASP.NET Core MVC.
+---
 
-ORM: Entity Framework Core (Code-First approach).
+## 🛠️ Tech Stack
 
-Database: MySQL 8.4 LTS.
+| Layer | Technology |
+|---|---|
+| Language | C# 13, .NET 9.0 |
+| Framework | ASP.NET Core MVC |
+| ORM | Entity Framework Core (Code-First) |
+| Database | MySQL 8.4 LTS |
+| Frontend | Razor Views, HTML5, CSS3, JavaScript, Bootstrap 5 |
+| DevOps | Docker & Docker Compose |
 
-Frontend: Razor Views, HTML5, CSS3, JavaScript, Bootstrap 5.
+---
 
+## 🚀 How to Run Locally
 
-# 🚀 How to Run Locally
+### Prerequisites
+- [.NET 9 SDK](https://dotnet.microsoft.com/download)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
-## Prerequisites:
+### 1. Clone the repository
+```bash
+git clone https://github.com/HayziVV/SalesSystem-AspNetCore
+cd SalesWebMVCProject
+```
 
-  .NET 9 SDK
-	
-## 1.Clone the repository
+### 2. Start the database
+Ensure Docker is running and execute:
+```bash
+docker-compose up -d
+```
+This will spin up a MySQL 8.4 container pre-configured for the application.
 
-  git clone https://github.com/HayziVV/SalesSystem-AspNetCore
-	
-  cd SalesWebMVCProject
-
-## 2.Start the Database
-
-Start your own MySQL Database and configure appsettings.json
-
-
-## 3. Apply Migrations
-Create the database schema and tables using package manager console:
-
+### 3. Apply migrations
+Create the database schema using the Package Manager Console:
+```bash
 Update-Database
+```
 
-## 4. Run the Application
+### 4. Run the application
+Press `Ctrl+F5` (without debugging) or `F5` (with debugging) in Visual Studio.
 
-Ctrl+F5 (Start without debugging) or F5 (Start Debugging)
-	
+The SeedingService will automatically populate the database with test data on first run.
 
-# 👤 Author
+---
 
-Vitor Henrique Vercezi
+## ⚠️ Security Notice
 
-LinkedIn: vítor-vercezi-b7917335b
+This project is intended for portfolio and demonstration purposes only. Credentials found in `appsettings.json` and `docker-compose.yml` are hardcoded strictly to facilitate local testing and should **never** be used in a production environment.
 
-GitHub: @HayziVV
+---
+
+## 👤 Author
+
+**Vitor Henrique Vercezi**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vítor-vercezi-b7917335b/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/HayziVV)
